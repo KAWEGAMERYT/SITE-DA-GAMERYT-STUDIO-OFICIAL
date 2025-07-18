@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAMERYT STUDIO OFICIAL</title>
+  <style>
+    :root {
+      --cor-principal: #00ff88;
+      --cor-fundo: #111;
+      --cor-secundaria: #222;
+      --texto: #fff;
+    }
+    body.claro {
+      --cor-fundo: #fff;
+      --cor-secundaria: #f0f0f0;
+      --texto: #111;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: var(--cor-fundo);
+      color: var(--texto);
+      font-family: Arial, sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background-color: var(--cor-secundaria);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid var(--cor-principal);
+      position: relative;
+    }
+    header h1 {
+      color: var(--cor-principal);
+      font-size: 2em;
+    }
+    #modoBtn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: var(--cor-principal);
+      border: none;
+      color: #000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav input {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background-color: var(--cor-secundaria);
+      border: 1px solid #333;
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      border-color: var(--cor-principal);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .card h2 {
+      color: var(--cor-principal);
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+    .card p {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+    .btn-download {
+      background-color: var(--cor-principal);
+      color: #000;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--cor-secundaria);
+      margin-top: 40px;
+    }
+    .contador {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: var(--texto);
+    }
+    .redes {
+      margin-top: 10px;
+    }
+    .redes a {
+      color: var(--cor-principal);
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GAMERYT STUDIO OFICIAL</h1>
+    <button id="modoBtn">🌙</button>
+    <p>Jogos e Apps atualizados para Android</p>
+  </header>
+
+  <nav>
+    <input type="text" placeholder="🔍 Buscar jogos e apps..." id="search" onkeyup="filtrarCards()" />
+  </nav>
+
+  <section class="container" id="lista">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150.png?text=Free+Fire+APK" alt="Free Fire" />
+      <h2>Free Fire</h2>
+      <p>Jogo de tiro battle royale para Android. Baixe a última versão!</p>
+      <a href="#" class="btn-download">⬇ Baixar APK</a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150.png?text=Spotify+Mod" alt="Spotify" />
+      <h2>Spotify Premium Mod</h2>
+      <p>Versão modificada com recursos premium desbloqueados.</p>
+      <a href="#" class="btn-download">⬇ Baixar APK</a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150.png?text=WhatsApp+GB" alt="WhatsApp GB" />
+      <h2>WhatsApp GB</h2>
+      <p>WhatsApp com funções extras: temas, privacidade, etc.</p>
+      <a href="#" class="btn-download">⬇ Baixar APK</a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150.png?text=Ebook+Kawe" alt="Capa do eBook">
+      <h2>A Jornada de Kawe</h2>
+      <p>Conheça a história inspiradora de Kawe Angerlandio e sua jornada rumo ao sucesso no futebol!</p>
+      <a href="#leitor-ebook" class="btn-download">📖 Ler Grátis</a>
+      <a href="https://mpago.la/XXXXX" target="_blank" class="btn-download" style="margin-top: 10px; background-color: gold;">
+        💰 Comprar eBook Completo
+      </a>
+    </div>
+  </section>
+
+  <section id="leitor-ebook" style="padding: 20px;">
+    <h2 style="color: var(--cor-principal); text-align: center;">📖 Leitura Online: A Jornada de Kawe</h2>
+    <iframe src="A.Jornada_de_Kawe_Angerlandio_Lopes_de_Sousa.pdf" width="100%" height="600px" style="border: none; margin-top: 15px; border-radius: 10px;"></iframe>
+  </section>
+
+  <footer>
+    <p>© 2025 GAMERYT STUDIO OFICIAL • Criado por Kawê</p>
+    <div class="contador">👥 Visitantes: <span id="visitCount">0</span></div>
+
+    <div class="redes">
+      <a href="https://www.youtube.com/@kawe_kx.oficial" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/kawe_kx.oficial" target="_blank">Instagram</a>
+    </div>
+
+    <!-- NOVOS BOTÕES -->
+    <div style="margin-top: 15px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+      <a href="https://chat.whatsapp.com/GA0cFUl1rlh9SJA7nAKxwz?mode=r_t" target="_blank" style="
+        display: inline-flex;
+        align-items: center;
+        background-color: #25D366;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;">
+        📱 Entrar no Grupo do WhatsApp
+      </a>
+
+      <a href="https://discord.gg/PYnnxS2e" target="_blank" style="
+        display: inline-flex;
+        align-items: center;
+        background-color: #5865F2;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;">
+        💬 Acessar o Discord
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function filtrarCards() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        const nome = card.querySelector('h2').textContent.toLowerCase();
+        card.style.display = nome.includes(input) ? 'block' : 'none';
+      });
+    }
+
+    const btnModo = document.getElementById('modoBtn');
+    btnModo.addEventListener('click', () => {
+      document.body.classList.toggle('claro');
+      btnModo.textContent = document.body.classList.contains('claro') ? '🌞' : '🌙';
+    });
+
+    let contador = localStorage.getItem('visitas') || 0;
+    contador++;
+    localStorage.setItem('visitas', contador);
+    document.getElementById('visitCount').textContent = contador;
+
+    window.onload = () => {
+      alert('👋 Bem-vindo ao GAMERYT STUDIO OFICIAL!');
+    };
+  </script>
+
+  <!-- COMENTÁRIOS -->
+  <section style="padding: 20px;">
+    <h2 style="color: var(--cor-principal);">💬 Comentários</h2>
+    <textarea id="comentario" rows="4" style="width: 100%; border-radius: 5px;"></textarea>
+    <button onclick="postarComentario()" style="margin-top: 10px; padding: 10px; background-color: var(--cor-principal); color: #000; border: none; border-radius: 5px;">Enviar</button>
+    <div id="comentarios" style="margin-top: 20px;"></div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section style="padding: 20px; text-align: center;">
+    <h2 style="color: var(--cor-principal);">📩 Inscreva-se para Novidades</h2>
+    <input type="email" placeholder="Seu e-mail" style="padding: 10px; width: 60%; border-radius: 5px; border: none;">
+    <button style="padding: 10px; background: var(--cor-principal); border: none; color: #000; border-radius: 5px;">Inscrever</button>
+  </section>
+
+  <!-- PAINEL DE ESTATÍSTICAS -->
+  <section style="padding: 20px; text-align: center;">
+    <h2 style="color: var(--cor-principal);">📊 Painel de Estatísticas</h2>
+    <p>Total de Visitas: <strong id="visitasPainel">0</strong></p>
+  </section>
+
+  <script>
+    // Curtidas por card
+    document.querySelectorAll('.card').forEach((card, i) => {
+      const likeKey = `like${i}`;
+      const likeCount = document.createElement('div');
+      likeCount.className = 'curtidas';
+      likeCount.style.marginTop = '10px';
+      likeCount.innerHTML = '❤️ <span class="like-count">0</span> curtidas';
+      card.appendChild(likeCount);
+
+      let count = localStorage.getItem(likeKey) || 0;
+      likeCount.querySelector('.like-count').textContent = count;
+
+      card.addEventListener('click', () => {
+        count++;
+        localStorage.setItem(likeKey, count);
+        likeCount.querySelector('.like-count').textContent = count;
+      });
+    });
+
+    // Comentários simples
+    function postarComentario() {
+      const texto = document.getElementById('comentario').value;
+      if (texto.trim()) {
+        const p = document.createElement('p');
+        p.textContent = texto;
+        document.getElementById('comentarios').appendChild(p);
+        document.getElementById('comentario').value = '';
+      }
+    }
+
+    // Atualizar painel de visitas
+    document.getElementById('visitasPainel').textContent = localStorage.getItem('visitas') || 0;
+
+    // Alerta de novo APK
+    setTimeout(() => {
+      alert("🔔 Novo APK disponível: Atualize já o Free Fire!");
+    }, 5000);
+  </script>
+
+</body>
+</html>
